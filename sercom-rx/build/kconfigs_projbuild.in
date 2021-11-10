@@ -1,5 +1,0 @@
-source "C:/Users/p-squared/esp32-projects/sercom-rx/components/app_update/Kconfig.projbuild"
-source "C:/Users/p-squared/esp32-projects/sercom-rx/components/bootloader/Kconfig.projbuild"
-source "C:/Users/p-squared/esp32-projects/sercom-rx/components/esptool_py/Kconfig.projbuild"
-source "C:/Users/p-squared/esp32-projects/sercom-rx/components/partition_table/Kconfig.projbuild"
-source "C:/Users/p-squared/esp32-projects/sercom-rx/main/Kconfig.projbuild"
