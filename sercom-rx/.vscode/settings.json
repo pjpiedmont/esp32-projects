@@ -5,8 +5,7 @@
     "idf.customExtraVars": "{\"OPENOCD_SCRIPTS\":\"C:\\\\Users\\\\p-squared\\\\.espressif\\\\tools\\\\openocd-esp32\\\\v0.10.0-esp32-20210401/openocd-esp32/share/openocd/scripts\",\"IDF_CCACHE_ENABLE\":\"1\"}",
     "idf.espIdfPathWin": "C:\\Users\\p-squared\\esp\\esp-idf",
     "idf.openOcdConfigs": "interface/ftdi/esp32_devkitjv1.cfg,target/esp32s2.cfg",
-    "idf.portWin": "COM9",
+    "idf.portWin": "COM3",
     "idf.pythonBinPathWin": "C:\\Users\\p-squared\\.espressif\\python_env\\idf4.3_py3.8_env\\Scripts\\python.exe",
-	"idf.toolsPathWin": "C:\\Users\\p-squared\\.espressif",
-	"cmake.configureOnOpen": false
+    "idf.toolsPathWin": "C:\\Users\\p-squared\\.espressif"
 }

@@ -5,21 +5,7 @@
     "idf.customExtraVars": "{\"OPENOCD_SCRIPTS\":\"C:\\\\Users\\\\p-squared\\\\.espressif\\\\tools\\\\openocd-esp32\\\\v0.10.0-esp32-20210401/openocd-esp32/share/openocd/scripts\",\"IDF_CCACHE_ENABLE\":\"1\"}",
     "idf.espIdfPathWin": "C:\\Users\\p-squared\\esp\\esp-idf",
     "idf.openOcdConfigs": "interface/ftdi/esp32_devkitjv1.cfg,target/esp32s2.cfg",
-    "idf.portWin": "COM8",
+    "idf.portWin": "COM4",
     "idf.pythonBinPathWin": "C:\\Users\\p-squared\\.espressif\\python_env\\idf4.3_py3.8_env\\Scripts\\python.exe",
-	"idf.toolsPathWin": "C:\\Users\\p-squared\\.espressif",
-	"cmake.configureOnOpen": true,
-	"files.associations": {
-		"led_strip.h": "c",
-		"sdkconfig.h": "c",
-		"*.tcc": "c",
-		"deque": "c",
-		"list": "c",
-		"string": "c",
-		"unordered_map": "c",
-		"unordered_set": "c",
-		"vector": "c",
-		"system_error": "c",
-		"*.ipp": "c"
-	}
+    "idf.toolsPathWin": "C:\\Users\\p-squared\\.espressif"
 }

@@ -14,23 +14,21 @@
 #include "driver/rmt.h"
 #include "led_strip.h"
 
-#define DELAY(ms) vTaskDelay(pdMS_TO_TICKS(ms))
+#define DELAY(ms)  vTaskDelay(pdMS_TO_TICKS(ms))
 
-#define TX_PERIOD 20
+#define TX_PERIOD  20
 
-#define TX_CLK 0
-#define TX_EN 1
-#define TX_DATA 2
-// #define LED		 5
-#define GPIO_OUTPUTS ((1ULL << TX_CLK) | (1ULL << TX_EN) | (1ULL << TX_DATA))
+#define TX_CLK   0
+#define TX_EN    1
+#define TX_DATA  2
+#define GPIO_OUTPUTS  ((1ULL << TX_CLK) | (1ULL << TX_EN) | (1ULL << TX_DATA))
 
-#define RMT_TX_CHANNEL RMT_CHANNEL_0
+#define RMT_TX_CHANNEL  RMT_CHANNEL_0
 
 char *message = "Hello world!";
 led_strip_t *strip;
 
 static void send(void *pvParameters);
-static void blink(void *pvParameters);
 
 void hw_setup(void);
 void clrLED(void);
@@ -43,7 +41,6 @@ void app_main(void)
 	DELAY(1000);
 
 	xTaskCreate(send, "Send Data", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
-	xTaskCreate(blink, "Blink LED", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
 	vTaskDelete(NULL);
 }
 
@@ -61,9 +58,6 @@ static void send(void *pvParameters)
 
 		while (*ptr != 0)
 		{
-			// setLED();
-			// gpio_set_level(TX_EN, 0);
-
 			char tx_byte = *ptr;
 			printf("%c: ", tx_byte);
 
@@ -76,13 +70,11 @@ static void send(void *pvParameters)
 				if (bit)
 				{
 					gpio_set_level(TX_DATA, 1);
-					// setLED();
 					printf("1");
 				}
 				else
 				{
 					gpio_set_level(TX_DATA, 0);
-					// clrLED();
 					printf("0");
 				}
 
@@ -93,26 +85,11 @@ static void send(void *pvParameters)
 
 			printf("\n");
 			ptr++;
-
-			// gpio_set_level(TX_EN, 1);
-			// clrLED();
-			// DELAY(TX_PERIOD * 2);
 		}
 
 		gpio_set_level(TX_EN, 1);
 		printf("\n");
 		DELAY(TX_PERIOD * 5);
-	}
-}
-
-static void blink(void *pvParameters)
-{
-	while (1)
-	{
-		// gpio_set_level(LED, 1);
-		// DELAY(500);
-		// gpio_set_level(LED, 0);
-		// DELAY(500);
 	}
 }
 
