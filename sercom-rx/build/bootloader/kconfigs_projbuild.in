@@ -1,0 +1,3 @@
+source "C:/Users/p-squared/esp32-projects/sercom-rx/components/bootloader/Kconfig.projbuild"
+source "C:/Users/p-squared/esp/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "C:/Users/p-squared/esp/esp-idf/components/partition_table/Kconfig.projbuild"
